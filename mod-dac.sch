@@ -1,0 +1,255 @@
+EESchema Schematic File Version 4
+LIBS:mod-dac-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5C210FEE
+P 3225 1950
+F 0 "R1" V 3018 1950 50  0000 C CNN
+F 1 "20k" V 3109 1950 50  0000 C CNN
+F 2 "" V 3155 1950 50  0001 C CNN
+F 3 "~" H 3225 1950 50  0001 C CNN
+	1    3225 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C21113B
+P 3800 1425
+F 0 "C1" V 3548 1425 50  0000 C CNN
+F 1 "100pF" V 3639 1425 50  0000 C CNN
+F 2 "" H 3838 1275 50  0001 C CNN
+F 3 "~" H 3800 1425 50  0001 C CNN
+	1    3800 1425
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5C2114A7
+P 2475 2275
+F 0 "V1" H 2703 2321 50  0000 L CNN
+F 1 "VOLTAGE" H 2703 2230 50  0000 L CNN
+F 2 "" H 2475 2275 50  0001 C CNN
+F 3 "" H 2475 2275 50  0001 C CNN
+F 4 "V" H 2475 2275 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 0 ac 0 sin(1.25 1.25 200)" H 2475 2275 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2475 2275 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2475 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3075 1950 2850 1950
+Wire Wire Line
+	2475 1950 2475 1975
+$Comp
+L power:GND #PWR01
+U 1 1 5C2117C9
+P 2475 2925
+F 0 "#PWR01" H 2475 2675 50  0001 C CNN
+F 1 "GND" H 2480 2752 50  0000 C CNN
+F 2 "" H 2475 2925 50  0001 C CNN
+F 3 "" H 2475 2925 50  0001 C CNN
+	1    2475 2925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2475 2575 2475 2925
+$Comp
+L power:GND #PWR0101
+U 1 1 5C217975
+P 3425 3050
+F 0 "#PWR0101" H 3425 2800 50  0001 C CNN
+F 1 "GND" H 3430 2877 50  0000 C CNN
+F 2 "" H 3425 3050 50  0001 C CNN
+F 3 "" H 3425 3050 50  0001 C CNN
+	1    3425 3050
+	1    0    0    -1  
+$EndComp
+Text GLabel 2850 1850 1    50   Input ~ 0
+vin
+Wire Wire Line
+	2850 1850 2850 1950
+Connection ~ 2850 1950
+Wire Wire Line
+	2850 1950 2475 1950
+$Comp
+L Amplifier_Operational:TL072 U1
+U 1 1 5C2187D4
+P 3825 2050
+F 0 "U1" H 3825 1683 50  0000 C CNN
+F 1 "TL072" H 3825 1774 50  0000 C CNN
+F 2 "" H 3825 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3825 2050 50  0001 C CNN
+F 4 "X" H 3825 2050 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 3825 2050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3825 2050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "TL072.301" H 3825 2050 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 3825 2050 50  0001 C CNN "Spice_Node_Sequence"
+	1    3825 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U1
+U 3 1 5C21887F
+P 6100 2200
+F 0 "U1" H 6058 2246 50  0000 L CNN
+F 1 "TL072" H 6058 2155 50  0000 L CNN
+F 2 "" H 6100 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 2200 50  0001 C CNN
+	3    6100 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 5025 2050 2    50   Input ~ 0
+vout
+$Comp
+L Device:R R3
+U 1 1 5C2536A8
+P 4475 2050
+F 0 "R3" V 4268 2050 50  0000 C CNN
+F 1 "1k" V 4359 2050 50  0000 C CNN
+F 2 "" V 4405 2050 50  0001 C CNN
+F 3 "~" H 4475 2050 50  0001 C CNN
+	1    4475 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C253727
+P 3825 975
+F 0 "R2" V 4032 975 50  0000 C CNN
+F 1 "130k" V 3941 975 50  0000 C CNN
+F 2 "" V 3755 975 50  0001 C CNN
+F 3 "~" H 3825 975 50  0001 C CNN
+	1    3825 975 
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3650 1425 3450 1425
+Wire Wire Line
+	3450 1425 3450 1950
+Wire Wire Line
+	3450 1950 3375 1950
+Wire Wire Line
+	3450 1950 3525 1950
+Connection ~ 3450 1950
+Wire Wire Line
+	3675 975  3450 975 
+Wire Wire Line
+	3450 975  3450 1425
+Connection ~ 3450 1425
+Wire Wire Line
+	4325 2050 4225 2050
+Wire Wire Line
+	3950 1425 4225 1425
+Wire Wire Line
+	4225 1425 4225 2050
+Connection ~ 4225 2050
+Wire Wire Line
+	4225 2050 4125 2050
+Wire Wire Line
+	3975 975  4800 975 
+Wire Wire Line
+	4800 975  4800 2050
+Wire Wire Line
+	4625 2050 4800 2050
+Connection ~ 4800 2050
+Wire Wire Line
+	4800 2050 5025 2050
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5C25460A
+P 3425 2600
+F 0 "V2" H 3653 2646 50  0000 L CNN
+F 1 "VSOURCE" H 3653 2555 50  0000 L CNN
+F 2 "" H 3425 2600 50  0001 C CNN
+F 3 "" H 3425 2600 50  0001 C CNN
+F 4 "V" H 3425 2600 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 1.087 ac 0" H 3425 2600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3425 2600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3425 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3525 2150 3425 2150
+Wire Wire Line
+	3425 2150 3425 2300
+Wire Wire Line
+	3425 2900 3425 3050
+Text Label 3425 2150 2    50   ~ 0
+vbias
+Text Label 3450 975  0    50   ~ 0
+vinv
+Text Label 4225 1425 0    50   ~ 0
+vopout
+$Comp
+L pspice:VSOURCE V3
+U 1 1 5C256A59
+P 6675 1925
+F 0 "V3" H 6903 1971 50  0000 L CNN
+F 1 "VSOURCE" H 6903 1880 50  0000 L CNN
+F 2 "" H 6675 1925 50  0001 C CNN
+F 3 "" H 6675 1925 50  0001 C CNN
+F 4 "V" H 6675 1925 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 15 ac 0" H 6675 1925 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6675 1925 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6675 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V4
+U 1 1 5C256AE0
+P 6675 2725
+F 0 "V4" H 6903 2771 50  0000 L CNN
+F 1 "VSOURCE" H 6903 2680 50  0000 L CNN
+F 2 "" H 6675 2725 50  0001 C CNN
+F 3 "" H 6675 2725 50  0001 C CNN
+F 4 "V" H 6675 2725 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 15 ac 0" H 6675 2725 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6675 2725 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6675 2725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C256B86
+P 6900 2325
+F 0 "#PWR?" H 6900 2075 50  0001 C CNN
+F 1 "GND" H 6905 2152 50  0000 C CNN
+F 2 "" H 6900 2325 50  0001 C CNN
+F 3 "" H 6900 2325 50  0001 C CNN
+	1    6900 2325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6675 2225 6675 2325
+Wire Wire Line
+	6900 2325 6675 2325
+Connection ~ 6675 2325
+Wire Wire Line
+	6675 2325 6675 2425
+Wire Wire Line
+	6000 2500 6000 3125
+Wire Wire Line
+	6000 3125 6675 3125
+Wire Wire Line
+	6675 3125 6675 3025
+Wire Wire Line
+	6675 1625 6675 1550
+Wire Wire Line
+	6675 1550 6000 1550
+Wire Wire Line
+	6000 1550 6000 1900
+$EndSCHEMATC

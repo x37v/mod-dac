@@ -1,0 +1,13 @@
+1
+9
+.tran 100u 100m
+3
+1
+/vbias
+V
+1
+vin
+V
+1
+vout
+V
