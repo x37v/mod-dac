@@ -1,10 +1,16 @@
+2
 1
+
+2
 9
-.tran 100u 100m
-3
-1
-/vbias
+vout
 V
+5
+vout
+V
+9
+.tran 1m 100m
+2
 1
 vin
 V
