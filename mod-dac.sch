@@ -85,33 +85,6 @@ Wire Wire Line
 Connection ~ 2850 1950
 Wire Wire Line
 	2850 1950 2475 1950
-$Comp
-L Amplifier_Operational:TL072 U1
-U 1 1 5C2187D4
-P 3825 2050
-F 0 "U1" H 3825 1683 50  0000 C CNN
-F 1 "TL072" H 3825 1774 50  0000 C CNN
-F 2 "" H 3825 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3825 2050 50  0001 C CNN
-F 4 "X" H 3825 2050 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072" H 3825 2050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3825 2050 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "TL072.301" H 3825 2050 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 2 8 4 1" H 3825 2050 50  0001 C CNN "Spice_Node_Sequence"
-	1    3825 2050
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U1
-U 3 1 5C21887F
-P 6100 2200
-F 0 "U1" H 6058 2246 50  0000 L CNN
-F 1 "TL072" H 6058 2155 50  0000 L CNN
-F 2 "" H 6100 2200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6100 2200 50  0001 C CNN
-	3    6100 2200
-	1    0    0    -1  
-$EndComp
 Text GLabel 5025 2050 2    50   Input ~ 0
 vout
 $Comp
@@ -254,4 +227,31 @@ Wire Wire Line
 	6000 1550 6000 1900
 Text Notes 875  4075 0    50   ~ 0
 .ac dec 1000 100 20000
+$Comp
+L Amplifier_Operational:TL074 U1
+U 1 1 5C2693FF
+P 3825 2050
+F 0 "U1" H 3825 1683 50  0000 C CNN
+F 1 "TL074" H 3825 1774 50  0000 C CNN
+F 2 "" H 3775 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3875 2250 50  0001 C CNN
+F 4 "X" H 3825 2050 50  0001 C CNN "Spice_Primitive"
+F 5 "TL074" H 3825 2050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3825 2050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 2 4 11 1" H 3825 2050 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "TL074.301" H 3825 2050 50  0001 C CNN "Spice_Lib_File"
+	1    3825 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 5 1 5C2694AE
+P 6100 2200
+F 0 "U1" H 6058 2246 50  0000 L CNN
+F 1 "TL074" H 6058 2155 50  0000 L CNN
+F 2 "" H 6050 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6150 2400 50  0001 C CNN
+	5    6100 2200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
