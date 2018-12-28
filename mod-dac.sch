@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -14,244 +14,374 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 9250 875  1475 1125
+U 5C26D04F
+F0 "scale and offset" 50
+F1 "scale-offset.sch" 50
+$EndSheet
 $Comp
-L Device:R R1
-U 1 1 5C210FEE
-P 3225 1950
-F 0 "R1" V 3018 1950 50  0000 C CNN
-F 1 "23.7k" V 3109 1950 50  0000 C CNN
-F 2 "" V 3155 1950 50  0001 C CNN
-F 3 "~" H 3225 1950 50  0001 C CNN
-	1    3225 1950
+L xnorman:DAC8168 U4
+U 1 1 5C2E7394
+P 2150 3700
+F 0 "U4" H 2150 4747 60  0000 C CNN
+F 1 "DAC8168" H 2150 4641 60  0000 C CNN
+F 2 "" H 2150 3800 60  0001 C CNN
+F 3 "" H 2150 3800 60  0001 C CNN
+	1    2150 3700
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 2900 2    50   Input ~ 0
+dac0
+Text GLabel 2800 3000 2    50   Input ~ 0
+dac1
+Text GLabel 2800 3100 2    50   Input ~ 0
+dac2
+Text GLabel 2800 3200 2    50   Input ~ 0
+dac3
+Text GLabel 2800 3300 2    50   Input ~ 0
+dac4
+Text GLabel 2800 3400 2    50   Input ~ 0
+dac5
+Text GLabel 2800 3500 2    50   Input ~ 0
+dac6
+Text GLabel 2800 3600 2    50   Input ~ 0
+dac7
+Wire Wire Line
+	2650 2900 2800 2900
+Wire Wire Line
+	2800 3000 2650 3000
+Wire Wire Line
+	2650 3100 2800 3100
+Wire Wire Line
+	2800 3200 2650 3200
+Wire Wire Line
+	2650 3300 2800 3300
+Wire Wire Line
+	2800 3400 2650 3400
+Wire Wire Line
+	2650 3500 2800 3500
+Wire Wire Line
+	2800 3600 2650 3600
+Text GLabel 1500 3450 0    50   Output ~ 0
+vref
+Wire Wire Line
+	1650 3450 1500 3450
+$Comp
+L power:GND #PWR05
+U 1 1 5C2E76E0
+P 1550 3600
+F 0 "#PWR05" H 1550 3350 50  0001 C CNN
+F 1 "GND" V 1555 3472 50  0000 R CNN
+F 2 "" H 1550 3600 50  0001 C CNN
+F 3 "" H 1550 3600 50  0001 C CNN
+	1    1550 3600
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	1650 3600 1550 3600
 $Comp
-L Device:C C1
-U 1 1 5C21113B
-P 3800 1425
-F 0 "C1" V 3548 1425 50  0000 C CNN
-F 1 "100pF" V 3639 1425 50  0000 C CNN
-F 2 "" H 3838 1275 50  0001 C CNN
-F 3 "~" H 3800 1425 50  0001 C CNN
-	1    3800 1425
+L power:+3.3V #PWR07
+U 1 1 5C2E79C2
+P 1550 2350
+F 0 "#PWR07" H 1550 2200 50  0001 C CNN
+F 1 "+3.3V" H 1565 2523 50  0000 C CNN
+F 2 "" H 1550 2350 50  0001 C CNN
+F 3 "" H 1550 2350 50  0001 C CNN
+	1    1550 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2350 1550 2500
+Wire Wire Line
+	1550 2900 1650 2900
+Text GLabel 1475 3100 0    50   Output ~ 0
+SCLK
+Text GLabel 1475 3200 0    50   Output ~ 0
+\SYNC
+Text GLabel 1475 3300 0    50   Output ~ 0
+DIN
+Wire Wire Line
+	1650 3100 1475 3100
+Wire Wire Line
+	1475 3200 1650 3200
+Wire Wire Line
+	1650 3300 1475 3300
+Text GLabel 1050 1400 2    50   Input ~ 0
+SCLK
+Text GLabel 1050 1500 2    50   Input ~ 0
+\SYNC
+Text GLabel 1050 1600 2    50   Input ~ 0
+DIN
+$Comp
+L power:GND #PWR06
+U 1 1 5C2E84E0
+P 1050 1700
+F 0 "#PWR06" H 1050 1450 50  0001 C CNN
+F 1 "GND" V 1055 1572 50  0000 R CNN
+F 2 "" H 1050 1700 50  0001 C CNN
+F 3 "" H 1050 1700 50  0001 C CNN
+	1    1050 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1050 1400 950  1400
+Wire Wire Line
+	950  1500 1050 1500
+Wire Wire Line
+	1050 1600 950  1600
+Wire Wire Line
+	950  1700 1050 1700
+$Comp
+L Connector_Generic:Conn_01x09 J2
+U 1 1 5C2E9C59
+P 3750 3250
+F 0 "J2" H 3829 3292 50  0000 L CNN
+F 1 "cv out" H 3829 3201 50  0000 L CNN
+F 2 "" H 3750 3250 50  0001 C CNN
+F 3 "~" H 3750 3250 50  0001 C CNN
+	1    3750 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3475 2850 0    50   Output ~ 0
+vout0
+Text GLabel 3475 2950 0    50   Output ~ 0
+vout1
+Text GLabel 3475 3050 0    50   Output ~ 0
+vout2
+Text GLabel 3475 3150 0    50   Output ~ 0
+vout3
+Text GLabel 3475 3250 0    50   Output ~ 0
+vout4
+Text GLabel 3475 3350 0    50   Output ~ 0
+vout5
+Text GLabel 3475 3450 0    50   Output ~ 0
+vout6
+Text GLabel 3475 3550 0    50   Output ~ 0
+vout7
+$Comp
+L power:GND #PWR08
+U 1 1 5C2EAB2A
+P 3475 3650
+F 0 "#PWR08" H 3475 3400 50  0001 C CNN
+F 1 "GND" V 3480 3522 50  0000 R CNN
+F 2 "" H 3475 3650 50  0001 C CNN
+F 3 "" H 3475 3650 50  0001 C CNN
+	1    3475 3650
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	3475 3650 3550 3650
+Wire Wire Line
+	3550 3550 3475 3550
+Wire Wire Line
+	3550 3450 3475 3450
+Wire Wire Line
+	3475 3350 3550 3350
+Wire Wire Line
+	3475 3250 3550 3250
+Wire Wire Line
+	3550 3150 3475 3150
+Wire Wire Line
+	3550 2850 3475 2850
+Wire Wire Line
+	3475 2950 3550 2950
+Wire Wire Line
+	3550 3050 3475 3050
 $Comp
-L pspice:VSOURCE V1
-U 1 1 5C2114A7
-P 2475 2275
-F 0 "V1" H 2703 2321 50  0000 L CNN
-F 1 "VOLTAGE" H 2703 2230 50  0000 L CNN
-F 2 "" H 2475 2275 50  0001 C CNN
-F 3 "" H 2475 2275 50  0001 C CNN
-F 4 "V" H 2475 2275 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 1.25 ac 1.25 sin(1.25 1.25 100)" H 2475 2275 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 2475 2275 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    2475 2275
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5C2ED92A
+P 750 1500
+F 0 "J1" H 670 1817 50  0000 C CNN
+F 1 "digi in" H 670 1726 50  0000 C CNN
+F 2 "" H 750 1500 50  0001 C CNN
+F 3 "~" H 750 1500 50  0001 C CNN
+	1    750  1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L trim:TRIM TR1
+U 1 1 5C2EE69F
+P 3150 5175
+F 0 "TR1" H 3217 5221 50  0000 L CNN
+F 1 "VREF TRIM" H 3217 5130 50  0000 L CNN
+F 2 "" H 3150 5175 50  0000 C CNN
+F 3 "" H 3150 5175 50  0000 C CNN
+	1    3150 5175
+	1    0    0    -1  
+$EndComp
+$Comp
+L trim:TRIM TR2
+U 1 1 5C2EE6FB
+P 3150 6625
+F 0 "TR2" H 3218 6671 50  0000 L CNN
+F 1 "BIAS TRIM" H 3218 6580 50  0000 L CNN
+F 2 "" H 3150 6625 50  0000 C CNN
+F 3 "" H 3150 6625 50  0000 C CNN
+	1    3150 6625
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5C2EEDF8
+P 3150 5675
+F 0 "#PWR09" H 3150 5425 50  0001 C CNN
+F 1 "GND" H 3155 5502 50  0000 C CNN
+F 2 "" H 3150 5675 50  0001 C CNN
+F 3 "" H 3150 5675 50  0001 C CNN
+	1    3150 5675
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3075 1950 2850 1950
-Wire Wire Line
-	2475 1950 2475 1975
+	3150 5425 3150 5550
 $Comp
-L power:GND #PWR01
-U 1 1 5C2117C9
-P 2475 2925
-F 0 "#PWR01" H 2475 2675 50  0001 C CNN
-F 1 "GND" H 2480 2752 50  0000 C CNN
-F 2 "" H 2475 2925 50  0001 C CNN
-F 3 "" H 2475 2925 50  0001 C CNN
-	1    2475 2925
+L power:GND #PWR010
+U 1 1 5C2EF405
+P 3150 7150
+F 0 "#PWR010" H 3150 6900 50  0001 C CNN
+F 1 "GND" H 3155 6977 50  0000 C CNN
+F 2 "" H 3150 7150 50  0001 C CNN
+F 3 "" H 3150 7150 50  0001 C CNN
+	1    3150 7150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2475 2575 2475 2925
-$Comp
-L power:GND #PWR0101
-U 1 1 5C217975
-P 3425 3050
-F 0 "#PWR0101" H 3425 2800 50  0001 C CNN
-F 1 "GND" H 3430 2877 50  0000 C CNN
-F 2 "" H 3425 3050 50  0001 C CNN
-F 3 "" H 3425 3050 50  0001 C CNN
-	1    3425 3050
-	1    0    0    -1  
-$EndComp
-Text GLabel 2850 1850 1    50   Input ~ 0
-vin
+	3150 6875 3150 7025
+Text GLabel 2750 5175 0    50   Input ~ 0
+vref
 Wire Wire Line
-	2850 1850 2850 1950
-Connection ~ 2850 1950
-Wire Wire Line
-	2850 1950 2475 1950
-Text GLabel 5025 2050 2    50   Input ~ 0
-vout
-$Comp
-L Device:R R3
-U 1 1 5C2536A8
-P 4475 2050
-F 0 "R3" V 4268 2050 50  0000 C CNN
-F 1 "1k" V 4359 2050 50  0000 C CNN
-F 2 "" V 4405 2050 50  0001 C CNN
-F 3 "~" H 4475 2050 50  0001 C CNN
-	1    4475 2050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5C253727
-P 3825 975
-F 0 "R2" V 4032 975 50  0000 C CNN
-F 1 "100k" V 3941 975 50  0000 C CNN
-F 2 "" V 3755 975 50  0001 C CNN
-F 3 "~" H 3825 975 50  0001 C CNN
-	1    3825 975 
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	3650 1425 3450 1425
-Wire Wire Line
-	3450 1425 3450 1950
-Wire Wire Line
-	3450 1950 3375 1950
-Wire Wire Line
-	3450 1950 3525 1950
-Connection ~ 3450 1950
-Wire Wire Line
-	3675 975  3450 975 
-Wire Wire Line
-	3450 975  3450 1425
-Connection ~ 3450 1425
-Wire Wire Line
-	4325 2050 4225 2050
-Wire Wire Line
-	3950 1425 4225 1425
-Wire Wire Line
-	4225 1425 4225 2050
-Connection ~ 4225 2050
-Wire Wire Line
-	4225 2050 4125 2050
-Wire Wire Line
-	3975 975  4800 975 
-Wire Wire Line
-	4800 975  4800 2050
-Wire Wire Line
-	4625 2050 4800 2050
-Connection ~ 4800 2050
-Wire Wire Line
-	4800 2050 5025 2050
-$Comp
-L pspice:VSOURCE V2
-U 1 1 5C25460A
-P 3425 2600
-F 0 "V2" H 3653 2646 50  0000 L CNN
-F 1 "VSOURCE" H 3653 2555 50  0000 L CNN
-F 2 "" H 3425 2600 50  0001 C CNN
-F 3 "" H 3425 2600 50  0001 C CNN
-F 4 "V" H 3425 2600 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 1 ac 0" H 3425 2600 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3425 2600 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3425 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3525 2150 3425 2150
-Wire Wire Line
-	3425 2150 3425 2300
-Wire Wire Line
-	3425 2900 3425 3050
-Text Label 3425 2150 2    50   ~ 0
+	3000 5175 2875 5175
+Text GLabel 2775 6625 0    50   Input ~ 0
 vbias
-Text Label 3450 975  0    50   ~ 0
-vinv
-Text Label 4225 1425 0    50   ~ 0
-vopout
+Wire Wire Line
+	3000 6625 2875 6625
+Text GLabel 3150 4825 1    50   Output ~ 0
+REFVCC
+Wire Wire Line
+	3150 4825 3150 4925
+Text GLabel 3150 6300 1    50   Output ~ 0
+REFVCC
+Wire Wire Line
+	3150 6300 3150 6375
+Text GLabel 1025 6250 2    50   Input ~ 0
+REFVCC
 $Comp
-L pspice:VSOURCE V3
-U 1 1 5C256A59
-P 6675 1925
-F 0 "V3" H 6903 1971 50  0000 L CNN
-F 1 "VSOURCE" H 6903 1880 50  0000 L CNN
-F 2 "" H 6675 1925 50  0001 C CNN
-F 3 "" H 6675 1925 50  0001 C CNN
-F 4 "V" H 6675 1925 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 15 ac 0" H 6675 1925 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6675 1925 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    6675 1925
-	1    0    0    -1  
-$EndComp
-$Comp
-L pspice:VSOURCE V4
-U 1 1 5C256AE0
-P 6675 2725
-F 0 "V4" H 6903 2771 50  0000 L CNN
-F 1 "VSOURCE" H 6903 2680 50  0000 L CNN
-F 2 "" H 6675 2725 50  0001 C CNN
-F 3 "" H 6675 2725 50  0001 C CNN
-F 4 "V" H 6675 2725 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 15 ac 0" H 6675 2725 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6675 2725 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    6675 2725
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C256B86
-P 6900 2325
-F 0 "#PWR?" H 6900 2075 50  0001 C CNN
-F 1 "GND" H 6905 2152 50  0000 C CNN
-F 2 "" H 6900 2325 50  0001 C CNN
-F 3 "" H 6900 2325 50  0001 C CNN
-	1    6900 2325
+L Device:C C16
+U 1 1 5C2F399D
+P 2875 6825
+F 0 "C16" H 2990 6871 50  0000 L CNN
+F 1 "1u" H 2990 6780 50  0000 L CNN
+F 2 "" H 2913 6675 50  0001 C CNN
+F 3 "~" H 2875 6825 50  0001 C CNN
+	1    2875 6825
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6675 2225 6675 2325
+	2875 6975 2875 7025
 Wire Wire Line
-	6900 2325 6675 2325
-Connection ~ 6675 2325
+	2875 7025 3150 7025
+Connection ~ 3150 7025
 Wire Wire Line
-	6675 2325 6675 2425
+	3150 7025 3150 7150
 Wire Wire Line
-	6000 2500 6000 3125
+	2875 6675 2875 6625
+Connection ~ 2875 6625
 Wire Wire Line
-	6000 3125 6675 3125
-Wire Wire Line
-	6675 3125 6675 3025
-Wire Wire Line
-	6675 1625 6675 1550
-Wire Wire Line
-	6675 1550 6000 1550
-Wire Wire Line
-	6000 1550 6000 1900
-Text Notes 875  4075 0    50   ~ 0
-.ac dec 1000 100 20000
+	2875 6625 2775 6625
 $Comp
-L Amplifier_Operational:TL074 U1
-U 1 1 5C2693FF
-P 3825 2050
-F 0 "U1" H 3825 1683 50  0000 C CNN
-F 1 "TL074" H 3825 1774 50  0000 C CNN
-F 2 "" H 3775 2150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3875 2250 50  0001 C CNN
-F 4 "X" H 3825 2050 50  0001 C CNN "Spice_Primitive"
-F 5 "TL074" H 3825 2050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3825 2050 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "3 2 4 11 1" H 3825 2050 50  0001 C CNN "Spice_Node_Sequence"
-F 8 "TL074.301" H 3825 2050 50  0001 C CNN "Spice_Lib_File"
-	1    3825 2050
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 5 1 5C2694AE
-P 6100 2200
-F 0 "U1" H 6058 2246 50  0000 L CNN
-F 1 "TL074" H 6058 2155 50  0000 L CNN
-F 2 "" H 6050 2300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6150 2400 50  0001 C CNN
-	5    6100 2200
+L Device:C C15
+U 1 1 5C2F7FA6
+P 2875 5375
+F 0 "C15" H 2990 5421 50  0000 L CNN
+F 1 "1u" H 2990 5330 50  0000 L CNN
+F 2 "" H 2913 5225 50  0001 C CNN
+F 3 "~" H 2875 5375 50  0001 C CNN
+	1    2875 5375
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2875 5175 2875 5225
+Connection ~ 2875 5175
+Wire Wire Line
+	2875 5175 2750 5175
+Wire Wire Line
+	2875 5525 2875 5550
+Wire Wire Line
+	2875 5550 3150 5550
+Connection ~ 3150 5550
+Wire Wire Line
+	3150 5550 3150 5675
+$Comp
+L power:+3.3V #PWR011
+U 1 1 5C2F9B2E
+P 975 6150
+F 0 "#PWR011" H 975 6000 50  0001 C CNN
+F 1 "+3.3V" H 990 6323 50  0000 C CNN
+F 2 "" H 975 6150 50  0001 C CNN
+F 3 "" H 975 6150 50  0001 C CNN
+	1    975  6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	975  6250 1025 6250
+Wire Wire Line
+	975  6150 975  6250
+Text Notes 650  5900 0    50   ~ 0
+do we want a separate vreg for the reference voltages?
+$Comp
+L Device:C C13
+U 1 1 5C2FD3EE
+P 1300 2500
+F 0 "C13" V 1048 2500 50  0000 C CNN
+F 1 "22u" V 1139 2500 50  0000 C CNN
+F 2 "" H 1338 2350 50  0001 C CNN
+F 3 "~" H 1300 2500 50  0001 C CNN
+	1    1300 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 5C2FD484
+P 1300 2900
+F 0 "C14" V 1048 2900 50  0000 C CNN
+F 1 "1u" V 1139 2900 50  0000 C CNN
+F 2 "" H 1338 2750 50  0001 C CNN
+F 3 "~" H 1300 2900 50  0001 C CNN
+	1    1300 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 2900 1450 2900
+Connection ~ 1550 2900
+Wire Wire Line
+	1550 2500 1450 2500
+Connection ~ 1550 2500
+Wire Wire Line
+	1550 2500 1550 2900
+$Comp
+L power:GND #PWR013
+U 1 1 5C2FF83A
+P 1075 2900
+F 0 "#PWR013" H 1075 2650 50  0001 C CNN
+F 1 "GND" V 1080 2772 50  0000 R CNN
+F 2 "" H 1075 2900 50  0001 C CNN
+F 3 "" H 1075 2900 50  0001 C CNN
+	1    1075 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5C2FF857
+P 1075 2500
+F 0 "#PWR012" H 1075 2250 50  0001 C CNN
+F 1 "GND" V 1080 2372 50  0000 R CNN
+F 2 "" H 1075 2500 50  0001 C CNN
+F 3 "" H 1075 2500 50  0001 C CNN
+	1    1075 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1075 2500 1150 2500
+Wire Wire Line
+	1150 2900 1075 2900
 $EndSCHEMATC
