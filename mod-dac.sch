@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:mod-dac-cache
-LIBS:shift-triggers-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -136,59 +135,59 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x09 J2
 U 1 1 5C2E9C59
-P 3750 3250
-F 0 "J2" H 3829 3292 50  0000 L CNN
-F 1 "cv out" H 3829 3201 50  0000 L CNN
-F 2 "" H 3750 3250 50  0001 C CNN
-F 3 "~" H 3750 3250 50  0001 C CNN
-	1    3750 3250
+P 2425 1475
+F 0 "J2" H 2504 1517 50  0000 L CNN
+F 1 "cv out" H 2504 1426 50  0000 L CNN
+F 2 "" H 2425 1475 50  0001 C CNN
+F 3 "~" H 2425 1475 50  0001 C CNN
+	1    2425 1475
 	1    0    0    -1  
 $EndComp
-Text GLabel 3475 2850 0    50   Output ~ 0
+Text GLabel 2150 1075 0    50   Output ~ 0
 vout0
-Text GLabel 3475 2950 0    50   Output ~ 0
+Text GLabel 2150 1175 0    50   Output ~ 0
 vout1
-Text GLabel 3475 3050 0    50   Output ~ 0
+Text GLabel 2150 1275 0    50   Output ~ 0
 vout2
-Text GLabel 3475 3150 0    50   Output ~ 0
+Text GLabel 2150 1375 0    50   Output ~ 0
 vout3
-Text GLabel 3475 3250 0    50   Output ~ 0
+Text GLabel 2150 1475 0    50   Output ~ 0
 vout4
-Text GLabel 3475 3350 0    50   Output ~ 0
+Text GLabel 2150 1575 0    50   Output ~ 0
 vout5
-Text GLabel 3475 3450 0    50   Output ~ 0
+Text GLabel 2150 1675 0    50   Output ~ 0
 vout6
-Text GLabel 3475 3550 0    50   Output ~ 0
+Text GLabel 2150 1775 0    50   Output ~ 0
 vout7
 $Comp
 L power:GND #PWR08
 U 1 1 5C2EAB2A
-P 3475 3650
-F 0 "#PWR08" H 3475 3400 50  0001 C CNN
-F 1 "GND" V 3480 3522 50  0000 R CNN
-F 2 "" H 3475 3650 50  0001 C CNN
-F 3 "" H 3475 3650 50  0001 C CNN
-	1    3475 3650
+P 2150 1875
+F 0 "#PWR08" H 2150 1625 50  0001 C CNN
+F 1 "GND" V 2155 1747 50  0000 R CNN
+F 2 "" H 2150 1875 50  0001 C CNN
+F 3 "" H 2150 1875 50  0001 C CNN
+	1    2150 1875
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3475 3650 3550 3650
+	2150 1875 2225 1875
 Wire Wire Line
-	3550 3550 3475 3550
+	2225 1775 2150 1775
 Wire Wire Line
-	3550 3450 3475 3450
+	2225 1675 2150 1675
 Wire Wire Line
-	3475 3350 3550 3350
+	2150 1575 2225 1575
 Wire Wire Line
-	3475 3250 3550 3250
+	2150 1475 2225 1475
 Wire Wire Line
-	3550 3150 3475 3150
+	2225 1375 2150 1375
 Wire Wire Line
-	3550 2850 3475 2850
+	2225 1075 2150 1075
 Wire Wire Line
-	3475 2950 3550 2950
+	2150 1175 2225 1175
 Wire Wire Line
-	3550 3050 3475 3050
+	2225 1275 2150 1275
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 5C2ED92A
