@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:mod-dac-cache
+LIBS:shift-triggers-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -384,4 +385,173 @@ Wire Wire Line
 	1075 2500 1150 2500
 Wire Wire Line
 	1150 2900 1075 2900
+$Comp
+L shift-triggers-rescue:R R26
+U 1 1 5C27DFC7
+P 7625 3775
+F 0 "R26" V 7705 3775 50  0000 C CNN
+F 1 "bead" V 7625 3775 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7555 3775 50  0001 C CNN
+F 3 "" H 7625 3775 50  0000 C CNN
+	1    7625 3775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L shift-triggers-rescue:CP C18
+U 1 1 5C27DFEA
+P 7875 4050
+F 0 "C18" H 7900 4150 50  0000 L CNN
+F 1 "10uF" H 7900 3950 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D7.5mm_P2.50mm" H 7913 3900 50  0001 C CNN
+F 3 "" H 7875 4050 50  0000 C CNN
+	1    7875 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L shift-triggers-rescue:MTA-156-4 P1
+U 1 1 5C27DFF1
+P 6900 3925
+F 0 "P1" H 6900 4175 50  0000 C CNN
+F 1 "MTA-156-4" V 7000 3925 50  0000 C CNN
+F 2 "mta-156:MTA-156-4" H 6900 3925 50  0001 C CNN
+F 3 "" H 6900 3925 50  0000 C CNN
+	1    6900 3925
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7475 3775 7100 3775
+Wire Wire Line
+	7775 3775 7875 3775
+Wire Wire Line
+	7875 3775 7875 3900
+$Comp
+L shift-triggers-rescue:GND #PWR016
+U 1 1 5C27E007
+P 7875 4250
+F 0 "#PWR016" H 7875 4000 50  0001 C CNN
+F 1 "GND" H 7875 4100 50  0000 C CNN
+F 2 "" H 7875 4250 50  0000 C CNN
+F 3 "" H 7875 4250 50  0000 C CNN
+	1    7875 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7875 4200 7875 4225
+Wire Wire Line
+	7100 3875 7500 3875
+Wire Wire Line
+	7500 3875 7500 3975
+Wire Wire Line
+	7500 3975 7100 3975
+Wire Wire Line
+	7500 4225 7625 4225
+Connection ~ 7875 4225
+Connection ~ 7500 3975
+$Comp
+L shift-triggers-rescue:PWR_FLAG #FLG01
+U 1 1 5C27E01D
+P 8225 4250
+F 0 "#FLG01" H 8225 4325 50  0001 C CNN
+F 1 "PWR_FLAG" H 8225 4400 50  0000 C CNN
+F 2 "" H 8225 4250 50  0001 C CNN
+F 3 "" H 8225 4250 50  0001 C CNN
+	1    8225 4250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7875 4225 7875 4250
+Wire Wire Line
+	7500 3975 7500 4225
+$Comp
+L shift-triggers-rescue:R R25
+U 1 1 5C2844C4
+P 7300 4225
+F 0 "R25" V 7380 4225 50  0000 C CNN
+F 1 "bead" V 7300 4225 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7230 4225 50  0001 C CNN
+F 3 "" H 7300 4225 50  0000 C CNN
+	1    7300 4225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4075 7100 4075
+$Comp
+L shift-triggers-rescue:CP C17
+U 1 1 5C285D73
+P 7625 4375
+F 0 "C17" H 7650 4475 50  0000 L CNN
+F 1 "10uF" H 7650 4275 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D7.5mm_P2.50mm" H 7663 4225 50  0001 C CNN
+F 3 "" H 7625 4375 50  0000 C CNN
+	1    7625 4375
+	1    0    0    -1  
+$EndComp
+Connection ~ 7625 4225
+Wire Wire Line
+	7625 4225 7875 4225
+Wire Wire Line
+	7300 4375 7300 4525
+Wire Wire Line
+	7300 4525 7475 4525
+Wire Wire Line
+	7875 4225 8225 4225
+Wire Wire Line
+	8225 4225 8225 4250
+$Comp
+L power:+15V #PWR015
+U 1 1 5C2937C8
+P 7875 3550
+F 0 "#PWR015" H 7875 3400 50  0001 C CNN
+F 1 "+15V" H 7890 3723 50  0000 C CNN
+F 2 "" H 7875 3550 50  0001 C CNN
+F 3 "" H 7875 3550 50  0001 C CNN
+	1    7875 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR014
+U 1 1 5C293829
+P 7475 4625
+F 0 "#PWR014" H 7475 4725 50  0001 C CNN
+F 1 "-15V" H 7490 4798 50  0000 C CNN
+F 2 "" H 7475 4625 50  0001 C CNN
+F 3 "" H 7475 4625 50  0001 C CNN
+	1    7475 4625
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7475 4525 7475 4625
+Connection ~ 7475 4525
+Wire Wire Line
+	7475 4525 7625 4525
+Wire Wire Line
+	7875 3550 7875 3775
+Connection ~ 7875 3775
+$Comp
+L shift-triggers-rescue:PWR_FLAG #FLG0101
+U 1 1 5C298F27
+P 7225 4525
+F 0 "#FLG0101" H 7225 4600 50  0001 C CNN
+F 1 "PWR_FLAG" H 7225 4675 50  0000 C CNN
+F 2 "" H 7225 4525 50  0001 C CNN
+F 3 "" H 7225 4525 50  0001 C CNN
+	1    7225 4525
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7225 4525 7300 4525
+Connection ~ 7300 4525
+$Comp
+L shift-triggers-rescue:PWR_FLAG #FLG0102
+U 1 1 5C29A528
+P 8175 3775
+F 0 "#FLG0102" H 8175 3850 50  0001 C CNN
+F 1 "PWR_FLAG" H 8175 3925 50  0000 C CNN
+F 2 "" H 8175 3775 50  0001 C CNN
+F 3 "" H 8175 3775 50  0001 C CNN
+	1    8175 3775
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7875 3775 8175 3775
 $EndSCHEMATC
