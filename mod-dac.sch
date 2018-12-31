@@ -110,9 +110,9 @@ Wire Wire Line
 Text GLabel 1050 1400 2    50   Input ~ 0
 SCLK
 Text GLabel 1050 1500 2    50   Input ~ 0
-\SYNC
-Text GLabel 1050 1600 2    50   Input ~ 0
 DIN
+Text GLabel 1050 1600 2    50   Input ~ 0
+\SYNC
 $Comp
 L power:GND #PWR06
 U 1 1 5C2E84E0
