@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 0)
+    (drawings 1)
     (tracks 364)
     (zones 0)
     (modules 62)
@@ -2369,12 +2369,12 @@
     )
   )
 
-  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5C29B308)
-    (at 122.555 58.801)
+  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 5C2A469D) (tstamp 5C29B308)
+    (at 122.936 58.928)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4.2) (layer F.SilkS)
+    (fp_text reference REF2 (at 0 -4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab)
@@ -2388,12 +2388,12 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
-  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5C29B317)
-    (at 123.571 111.379)
+  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 5C2A468C) (tstamp 5C29B317)
+    (at 122.936 111.252)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4.2) (layer F.SilkS)
+    (fp_text reference REF4 (at 0 -4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab)
@@ -2407,12 +2407,12 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
-  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5C29B326)
-    (at 86.106 111.379)
+  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 5C2A4692) (tstamp 5C29B326)
+    (at 85.852 111.252)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4.2) (layer F.SilkS)
+    (fp_text reference REF3 (at 0 -4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab)
@@ -2426,12 +2426,12 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
-  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5C29B335)
-    (at 85.979 58.928)
+  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 5C2A4698) (tstamp 5C2A7D8E)
+    (at 85.852 58.928)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (attr virtual)
-    (fp_text reference REF** (at 0 -4.2) (layer F.SilkS)
+    (fp_text reference REF1 (at 0 -4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab)
@@ -2444,6 +2444,8 @@
     )
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
+
+  (gr_poly (pts (xy 82.296 55.372) (xy 126.492 55.372) (xy 126.492 114.808) (xy 82.296 114.808)) (layer Edge.Cuts) (width 0.15))
 
   (segment (start 114.457 61.722) (end 114.457 63.754) (width 0.254) (layer F.Cu) (net 1))
   (segment (start 112.179 63.754) (end 107.218 68.715) (width 0.254) (layer F.Cu) (net 1))
