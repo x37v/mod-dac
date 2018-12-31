@@ -119,7 +119,7 @@ vbias
 Wire Wire Line
 	1150 1775 1300 1775
 Text GLabel 775  1575 0    50   Output ~ 0
-dac0
+dac1
 Wire Wire Line
 	775  1575 850  1575
 $Comp
@@ -240,7 +240,7 @@ vbias
 Wire Wire Line
 	1150 3175 1300 3175
 Text GLabel 775  2975 0    50   Output ~ 0
-dac1
+dac3
 Wire Wire Line
 	775  2975 850  2975
 $Comp
@@ -348,7 +348,7 @@ vbias
 Wire Wire Line
 	1150 4575 1300 4575
 Text GLabel 775  4375 0    50   Output ~ 0
-dac2
+dac5
 Wire Wire Line
 	775  4375 850  4375
 $Comp
@@ -456,7 +456,7 @@ vbias
 Wire Wire Line
 	1150 5975 1300 5975
 Text GLabel 775  5775 0    50   Output ~ 0
-dac3
+dac7
 Wire Wire Line
 	775  5775 850  5775
 $Comp
@@ -564,7 +564,7 @@ vbias
 Wire Wire Line
 	3825 1775 3975 1775
 Text GLabel 3450 1575 0    50   Output ~ 0
-dac4
+dac6
 Wire Wire Line
 	3450 1575 3525 1575
 $Comp
@@ -672,7 +672,7 @@ vbias
 Wire Wire Line
 	3825 3175 3975 3175
 Text GLabel 3450 2975 0    50   Output ~ 0
-dac5
+dac4
 Wire Wire Line
 	3450 2975 3525 2975
 $Comp
@@ -780,7 +780,7 @@ vbias
 Wire Wire Line
 	3825 4575 3975 4575
 Text GLabel 3450 4375 0    50   Output ~ 0
-dac6
+dac2
 Wire Wire Line
 	3450 4375 3525 4375
 $Comp
@@ -888,7 +888,7 @@ vbias
 Wire Wire Line
 	3825 5975 3975 5975
 Text GLabel 3450 5775 0    50   Output ~ 0
-dac7
+dac0
 Wire Wire Line
 	3450 5775 3525 5775
 $Comp
